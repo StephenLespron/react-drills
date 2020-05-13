@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Image from './Components/Image'
 
-function App() {
+class App extends Component{
+constructor(){
+  super()
+  this.state = {
+    source: `https://i.redd.it/b2pa93h5vqg21.png`
+  }
+}
+  render(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        <Image source={this.state.source}/>
     </div>
   );
+ } 
 }
 
 export default App;
